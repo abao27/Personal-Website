@@ -146,4 +146,20 @@
     background: hsl(0 0% 100% / 0.8);
     border: 1px solid hsl(220 13% 91% / 0.3);
   }
+  
+  .text-float {
+    animation: textFloat 3s ease-in-out infinite;
+  }
+
+  @keyframes textFloat {
+    0%, 100% { 
+      transform: translateY(0px) rotate(0deg);
+    }
+    33% { 
+      transform: translateY(-8px) rotate(1deg);
+    }
+    66% { 
+      transform: translateY(4px) rotate(-1deg);
+    }
+  }
 }

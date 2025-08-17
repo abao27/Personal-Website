@@ -1,13 +1,18 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
-import { GraduationCap, House } from "lucide-react";
+import { GraduationCap, House, Briefcase } from "lucide-react";
 
 const About = () => {
-  const skills = [
-    { name: "University of California, Berkeley (2022-2026)", icon: GraduationCap },
-    { name: "San Diego, CA", icon: House },
+  const summary = [
+    { name: "Prev SWE Intern @ Capital One", icon: Briefcase },
+    { name: "University of California, Berkeley", icon: GraduationCap },
+    { name: "San Diego, CA", icon: House }
   ];
+
+  const skills = [
+    "Full-Stack Development", "Machine Learning", "Computer Vision", "Data Science",
+    "Applied Math"
+  ]
 
   const technologies = [
     "Python", "Java", "C", "Golang", "JavaScript", "SQL", "x86", "Matlab",
@@ -24,11 +29,11 @@ const About = () => {
           {/* Main Content */}
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
 
-            {/* Skills Section */}
+            {/* Summary Section */}
             <div className="animate-slide-up" style={{animationDelay: '0.2s'}}>
               <div className="p-6 flex justify-center">
                 <img 
-                  src="/me.jpeg" // put your photo in public/me.jpg
+                  src="/me.jpeg"
                   alt="Alan Bao"
                   className="w-45 h-45 object-cover rounded-full shadow-lg"
                 />
@@ -38,14 +43,14 @@ const About = () => {
                 <h2 className="text-2xl font-space font-semibold mb-6">Alan Bao</h2>
                 
                 <div className="space-y-6">
-                  {skills.map((skill, index) => {
-                    const Icon = skill.icon;
+                  {summary.map((info, index) => {
+                    const Icon = info.icon;
                     return (
-                      <div key={skill.name} className="space-y-2">
+                      <div key={info.name} className="space-y-2">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <Icon size={18} className="text-accent" />
-                            <span className="font-medium">{skill.name}</span>
+                            <span className="font-medium">{info.name}</span>
                           </div>
                         </div>
                       </div>
@@ -90,9 +95,34 @@ const About = () => {
               </Card>
             </div>
           </div>
+
+          
           
 
           <div className="space-y-8">
+            {/* Technologies */}
+            <div className="animate-slide-up" style={{animationDelay: '0.4s'}}>
+              <Card className="p-8 shadow-card hover:shadow-elegant transition-smooth">
+                <h2 className="text-2xl font-space font-semibold mb-6 text-center">
+                  Core Skills
+                </h2>
+                
+                <div className="flex flex-wrap gap-3 justify-center">
+                  {skills.map((skill, index) => (
+                    <Badge 
+                      key={skill} 
+                      variant="secondary" 
+                      className="px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-smooth cursor-default"
+                      style={{animationDelay: `${0.6 + index * 0.05}s`}}
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </Card>
+            </div>
+
+
             {/* Technologies */}
             <div className="animate-slide-up" style={{animationDelay: '0.4s'}}>
               <Card className="p-8 shadow-card hover:shadow-elegant transition-smooth">

@@ -26,15 +26,15 @@ const Home = () => {
             
             {/* Hero Content */}
             <div className="animate-fade-in">
-              <h1 className="text-5xl md:text-7xl font-space font-bold text-white mb-6 leading-tight">
-                Welcome to My
-                <span className="block gradient-accent bg-clip-text text-transparent">
-                  Portfolio
+              <h1 className="text-8xl md:text9xl font-space font-bold text-white mb-6 leading-tight">
+                Hello, I'm{" "}
+                <span className="gradient-accent bg-clip-text text-transparent inline-block text-float">
+                  Alan
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-                I'm a passionate developer creating beautiful, functional, and user-friendly digital experiences.
+                
               </p>
 
               {/* CTA Buttons */}
@@ -76,7 +76,7 @@ const Home = () => {
        <div className="absolute bottom-0 left-0 right-0 z-10">
           <div className="container mx-auto px-6 py-4">
             <div className="text-center">
-              <p className="text-sm text-white/70">
+              <p className="text-xs text-white/70">
                 React • TypeScript • Node.js • Python
               </p>
             </div>
