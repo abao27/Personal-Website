@@ -1,9 +1,4 @@
-
 name = "personal-website"
-compatibility_date = "2024-01-01"
+compatibility_date = "2025-08-17"
 
-# Cloudflare Pages configuration
 pages_build_output_dir = "dist"
-
-[env.production.vars]
-NODE_PACKAGE_MANAGER = "npm"
