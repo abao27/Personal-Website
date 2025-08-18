@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Eye } from "lucide-react";
+import { ExternalLink, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import ucbassist from "@/assets/UCBAssist.jpeg";
 import project2 from "@/assets/project-2.jpg";
@@ -19,8 +19,7 @@ const Portfolio = () => {
       description: "An image-editing software derived from computer vision mathematics. Currently backend only.",
       image: project2,
       technologies: ["Python", "OpenCV", "Sci-kit Learn", "Scipy", "Numpy"],
-      liveUrl: "#",
-      githubUrl: "#",
+      url: "#",
       featured: true
     },
     {
@@ -29,8 +28,7 @@ const Portfolio = () => {
       description: "A webapp that helps UC Berkeley students research transferable community college courses.",
       image: ucbassist,
       technologies: ["Python", "React", "Javascript", "Selenium"],
-      liveUrl: "#",
-      githubUrl: "#",
+      url: "#",
       featured: true
     },
     {
@@ -39,8 +37,7 @@ const Portfolio = () => {
       description: "A mini-game with the objective of collecting all coins in a randomly-generated labyrinth.",
       image: coindungeon,
       technologies: ["Java", "edu.princeton.cs.algs4"],
-      liveUrl: "#",
-      githubUrl: "#",
+      url: "#",
       featured: false
     },
     {
@@ -49,8 +46,7 @@ const Portfolio = () => {
       description: "A webapp that visualizes tax data and can simulate a user's savings and retirement.",
       image: taxtools,
       technologies: ["Javascript", "Svelte", "Microsoft Excel"],
-      liveUrl: "#",
-      githubUrl: "#",
+      url: "#",
       featured: false
     },
     {
@@ -59,8 +55,7 @@ const Portfolio = () => {
       description: "The classic snake game that is playable in your terminal, coded in C.",
       image: snake,
       technologies: ["C"],
-      liveUrl: "#",
-      githubUrl: "#",
+      url: "#",
       featured: false
     },
     {
@@ -69,8 +64,7 @@ const Portfolio = () => {
       description: "Classic sudoku game coded in Python using pygame.",
       image: sudoku,
       technologies: ["Python"],
-      liveUrl: "#",
-      githubUrl: "#",
+      url: "https://github.com/abao27/sudoku",
       featured: false
     }
   ];
