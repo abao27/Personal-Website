@@ -22,12 +22,6 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    console.log({
-      service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    });
-
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
