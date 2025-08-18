@@ -21,11 +21,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-
-    console.log("PUBLIC KEY:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-    console.log("SERVICE ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
-    console.log("TEMPLATE ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-
+    
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
