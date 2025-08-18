@@ -85,9 +85,9 @@ const Portfolio = () => {
             <h1 className="text-4xl md:text-5xl font-space font-bold mb-6">
               My Portfolio
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A collection of projects showcasing my skills in software development, 
-              design, and problem-solving.
+            <p className="text-md text-muted-foreground max-w-2xl mx-auto">
+              A collection of projects highlighting my skills in software development,
+              artificial intelligence, applied mathematics, and more.
             </p>
           </div>
 

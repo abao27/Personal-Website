@@ -24,20 +24,20 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             
-            {/* Hero Content */}
+            {/* Introductions */}
             <div className="animate-fade-in">
-              <h1 className="text-8xl md:text9xl font-space font-bold text-white mb-6 leading-tight">
+              <h1 className="text-8xl md:text9xl font-space font-bold text-white mb-10 leading-tight">
                 Hello, I'm{" "}
                 <span className="gradient-accent bg-clip-text text-transparent inline-block text-float">
                   Alan
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-                
+              <p className="text-xl md:text-5lg text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Welcome to my webpage - where ideas become code
               </p>
 
-              {/* CTA Buttons */}
+              {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                 <Button variant="hero" size="lg" asChild className="animate-slide-up">
                   <Link to="/portfolio" className="flex items-center gap-2">
@@ -54,28 +54,29 @@ const Home = () => {
                 </a>
               </div>
 
-              {/* Social Links */}
-              <div className="flex justify-center gap-4 animate-slide-up" style={{animationDelay: '0.4s'}}>
-                <a href="https://github.com/abao27" target="_blank" rel="noopener noreferrer">
-                  <Button variant="glass" size="icon" className="rounded-full">
-                    <Github size={20} />
-                  </Button>
-                </a>
-                <a href="https://linkedin.com/in/alan-bao" target="_blank" rel="noopener noreferrer">
-                  <Button variant="glass" size="icon" className="rounded-full">
-                    <Linkedin size={20} />
-                  </Button>
-                </a>
-              </div>
+              
             </div>
           </div>
         </div>
       </div>
 
-      {/* Mini Technologies Footer */}
+      {/* Footer */}
        <div className="absolute bottom-0 left-0 right-0 z-10">
+          {/* Social Links */}
+          <div className="flex justify-center gap-4 animate-slide-up" style={{animationDelay: '0.4s'}}>
+            <a href="https://github.com/abao27" target="_blank" rel="noopener noreferrer">
+              <Button variant="glass" size="icon" className="rounded-full">
+                <Github size={20} />
+              </Button>
+            </a>
+            <a href="https://linkedin.com/in/alan-bao" target="_blank" rel="noopener noreferrer">
+              <Button variant="glass" size="icon" className="rounded-full">
+                <Linkedin size={20} />
+              </Button>
+            </a>
+          </div>
           <div className="container mx-auto px-6 py-4">
-            <div className="text-center">
+            <div className="text-right">
               <p className="text-xs text-white/70">
                 React • TypeScript • Node.js • Python
               </p>

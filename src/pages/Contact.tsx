@@ -3,9 +3,10 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -15,15 +16,36 @@ const Contact = () => {
     subject: "",
     message: ""
   });
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setLoading(true);
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formData,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your message. I'll get back to you soon!",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+        toast({
+          title: "Error",
+          description: "Oops! Something went wrong. Please try again later.",
+          variant: "destructive",
+        });
+        setLoading(false);
+      });
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -47,17 +69,17 @@ const Contact = () => {
       href: "tel:+18587339696"
     },
     {
+      icon: Linkedin,
+      label: "Linkedin",
+      value: "linkedin.com/in/alan-bao/",
+      href: "https://www.linkedin.com/in/alan-bao/"
+    },
+    {
       icon: MapPin,
       label: "Location",
       value: "San Francisco, CA",
-      href: "#"
+      href: "https://maps.app.goo.gl/QSTFSqPBsmB5kLq4A"
     }
-  ];
-
-  const socialLinks = [
-    { icon: Github, href: "http://github.com/abao27", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/alan-bao/", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
   ];
 
   return (
@@ -68,12 +90,8 @@ const Contact = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-space font-bold mb-6">
-              Get In Touch
+              Contact Me
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Have a project in mind or just want to say hello? I'd love to hear from you. 
-              Let's create something amazing together!
-            </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -142,9 +160,13 @@ const Contact = () => {
                     />
                   </div>
                   
-                  <Button type="submit" variant="hero" size="lg" className="w-full">
-                    <Send size={20} />
-                    Send Message
+                  <Button type="submit" variant="hero" size="lg" className="w-full" disabled={loading}>
+                    {loading ? "Sending..." : (
+                      <>
+                        <Send size={20} />
+                        Send Message
+                      </>
+                    )}
                   </Button>
                 </form>
               </Card>
@@ -152,15 +174,13 @@ const Contact = () => {
 
             {/* Contact Information */}
             <div className="space-y-8 animate-slide-up" style={{animationDelay: '0.2s'}}>
-              
               {/* Contact Details */}
               <Card className="p-8 shadow-card hover:shadow-elegant transition-smooth">
                 <h2 className="text-2xl font-space font-semibold mb-6">
                   Contact Information
                 </h2>
-                
                 <div className="space-y-6">
-                  {contactInfo.map((item, index) => {
+                  {contactInfo.map((item) => {
                     const Icon = item.icon;
                     return (
                       <div key={item.label} className="flex items-center gap-4 group">
@@ -172,6 +192,8 @@ const Contact = () => {
                           <a 
                             href={item.href}
                             className="text-foreground hover:text-accent transition-smooth font-medium"
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
                             {item.value}
                           </a>
@@ -182,54 +204,18 @@ const Contact = () => {
                 </div>
               </Card>
 
-              {/* Social Links */}
-              <Card className="p-8 shadow-card hover:shadow-elegant transition-smooth">
-                <h3 className="text-xl font-space font-semibold mb-6">
-                  Follow Me
-                </h3>
-                
-                <div className="flex gap-4">
-                  {socialLinks.map((social, index) => {
-                    const Icon = social.icon;
-                    return (
-                      <Button
-                        key={social.label}
-                        variant="outline"
-                        size="icon"
-                        className="rounded-full hover:scale-110 transition-bounce"
-                        style={{animationDelay: `${0.4 + index * 0.1}s`}}
-                      >
-                        <Icon size={20} />
-                      </Button>
-                    );
-                  })}
-                </div>
-                
-                <p className="text-sm text-muted-foreground mt-4">
-                  Connect with me on social media for updates on my latest projects 
-                  and tech insights.
-                </p>
-              </Card>
-
               {/* Availability */}
               <Card className="p-8 shadow-card hover:shadow-elegant transition-smooth border-2 border-accent/20">
                 <h3 className="text-xl font-space font-semibold mb-4">
-                  Current Availability
+                  Availability
                 </h3>
-                
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium text-green-600">Available for new projects</span>
+                  <span className="text-sm font-medium text-green-600">Available for new projects and work</span>
                 </div>
-                
                 <p className="text-sm text-muted-foreground mb-4">
-                  I'm currently accepting new freelance projects and full-time opportunities. 
-                  Expected response time: 24-48 hours.
+                  I'm currently seeking new freelance projects and new grad/entry level full-time opportunities.
                 </p>
-                
-                <Button variant="modern" size="sm" className="w-full">
-                  Schedule a Call
-                </Button>
               </Card>
             </div>
           </div>
