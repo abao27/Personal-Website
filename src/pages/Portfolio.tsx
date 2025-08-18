@@ -28,7 +28,7 @@ const Portfolio = () => {
       description: "A webapp that helps UC Berkeley students research transferable community college courses.",
       image: ucbassist,
       technologies: ["Python", "React", "Javascript", "Selenium"],
-      url: "#",
+      url: "https://github.com/abao27/UCB-Assist-Tool",
       featured: true
     },
     {
