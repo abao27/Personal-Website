@@ -21,7 +21,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
+
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -126,7 +126,7 @@ const Contact = () => {
                         type="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="your.email@example.com"
+                        placeholder="email@domain.com"
                         required
                         className="transition-smooth focus:shadow-glow"
                       />
@@ -140,7 +140,7 @@ const Contact = () => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleInputChange}
-                      placeholder="What's this about?"
+                      placeholder="Email subject"
                       required
                       className="transition-smooth focus:shadow-glow"
                     />
@@ -153,7 +153,7 @@ const Contact = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Tell me about your project or just say hello..."
+                      placeholder="Your message"
                       rows={5}
                       required
                       className="transition-smooth focus:shadow-glow resize-none"
