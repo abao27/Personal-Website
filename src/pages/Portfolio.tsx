@@ -82,6 +82,8 @@ const Portfolio = () => {
             <p className="text-md text-muted-foreground max-w-2xl mx-auto">
               A collection of projects highlighting my skills in software development,
               artificial intelligence, applied mathematics, and more.
+
+              Note: still updating this page so project links are not live yet
             </p>
           </div>
 
