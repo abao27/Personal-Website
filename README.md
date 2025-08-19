@@ -1,28 +1,31 @@
 # Welcome to Alan's Personal Website
 
-## Project info
+## Project Info
 
-**Use your preferred IDE**
+Live Link: [https://alanbao.org](https://alanbao.org)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+This is a React-Vite web portfolio showcasing Alan's technical work.
 
-Follow these steps:
+## Requirements
+
+Must install
+
+- Node.js
+- npm
+
+before using.
+
+## Usage
+
+To run locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-## What technologies are used for this project?
+## Tech Stack
 
 This project is built with:
 
