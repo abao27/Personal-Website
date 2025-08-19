@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Eye } from "lucide-react";
+import { ExternalLink, Eye, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 import ucbassist from "@/assets/UCBAssist.jpeg";
 import project2 from "@/assets/project-2.jpg";
@@ -15,20 +15,22 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
+      title: "UC Berkeley Assist Tool",
+      description: "A webapp that helps UC Berkeley students research transferable community college courses.",
+      image: ucbassist,
+      technologies: ["Python", "React", "Javascript", "Selenium"],
+      url: "https://abao27.github.io/UCB-Assist-Tool/",
+      github: "https://github.com/abao27/UCB-Assist-Tool",
+      featured: true
+    },
+    {
+      id: 2,
       title: "Image Editor",
       description: "An image-editing software derived from computer vision mathematics. Currently backend only.",
       image: project2,
       technologies: ["Python", "OpenCV", "Sci-kit Learn", "Scipy", "Numpy"],
       url: "#",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "UC Berkeley Assist Tool",
-      description: "A webapp that helps UC Berkeley students research transferable community college courses.",
-      image: ucbassist,
-      technologies: ["Python", "React", "Javascript", "Selenium"],
-      url: "https://github.com/abao27/UCB-Assist-Tool",
+      github: "#",
       featured: true
     },
     {
@@ -38,6 +40,7 @@ const Portfolio = () => {
       image: coindungeon,
       technologies: ["Java", "edu.princeton.cs.algs4"],
       url: "#",
+      github: "#",
       featured: false
     },
     {
@@ -47,6 +50,7 @@ const Portfolio = () => {
       image: taxtools,
       technologies: ["Javascript", "Svelte", "Microsoft Excel"],
       url: "#",
+      github: "#",
       featured: false
     },
     {
@@ -56,6 +60,7 @@ const Portfolio = () => {
       image: snake,
       technologies: ["C"],
       url: "#",
+      github: "#",
       featured: false
     }
   ];
@@ -99,9 +104,11 @@ const Portfolio = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-smooth">
                       <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-                        <Button size="sm" variant="glass" className="flex-1">
-                          <Eye size={16} />
-                          Live Demo
+                        <Button size="sm" variant="glass" className="flex-1" asChild>
+                          <a href={project.url} target="_blank" rel="noopener noreferrer">
+                            <Eye size={16} />
+                            Live Demo
+                          </a>
                         </Button>
                       </div>
                     </div>
@@ -122,9 +129,11 @@ const Portfolio = () => {
                     </div>
                     
                     <div className="flex gap-3">
-                      <Button size="sm" variant="modern" className="flex-1">
-                        <ExternalLink size={16} />
-                        View Project
+                      <Button size="sm" variant="modern" className="flex-1" asChild>
+                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink size={16} />
+                          View Project in Github
+                        </a>
                       </Button>
                     </div>
                   </div>
@@ -183,9 +192,16 @@ const Portfolio = () => {
                     </div>
                     
                     <div className="flex gap-2">
-                      <Button size="sm" variant="modern" className="flex-1">
-                        <Eye size={14} />
-                        View
+                      <Button size="sm" variant="modern" className="flex-1" asChild>
+                        <a href={project.url} target="_blank" rel="noopener noreferrer">
+                          <Eye size={14} />
+                          View
+                        </a>
+                      </Button>
+                      <Button size="sm" variant="outline" asChild>
+                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          <Github size={14} />
+                        </a>
                       </Button>
                     </div>
                   </div>
