@@ -57,15 +57,6 @@ const Portfolio = () => {
       technologies: ["C"],
       url: "#",
       featured: false
-    },
-    {
-      id: 6,
-      title: "Sudoku",
-      description: "Classic sudoku game coded in Python using pygame.",
-      image: sudoku,
-      technologies: ["Python"],
-      url: "https://github.com/abao27/sudoku",
-      featured: false
     }
   ];
 
