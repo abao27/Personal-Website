@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Eye, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 import ucbassist from "@/assets/UCBAssist.jpeg";
-import sudoku from "@/assets/sudoku.png";
 import coindungeon from "@/assets/coindungeon.png"
 import taxtools from "@/assets/taxtools.png"
 import snake from "@/assets/snake.png"
