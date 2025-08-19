@@ -4,11 +4,11 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Eye, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 import ucbassist from "@/assets/UCBAssist.jpeg";
-import project2 from "@/assets/project-2.jpg";
 import sudoku from "@/assets/sudoku.png";
 import coindungeon from "@/assets/coindungeon.png"
 import taxtools from "@/assets/taxtools.png"
 import snake from "@/assets/snake.png"
+import cs180 from "@/assets/cs180.png"
 
 
 const Portfolio = () => {
@@ -25,12 +25,12 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: "Image Editor",
-      description: "An image-editing software derived from computer vision mathematics. Currently backend only.",
-      image: project2,
+      title: "Computer Vision Portfolio*",
+      description: "Image editing, manipulation and generation derived from computer vision mathematics, courtesy of UC Berkeley COMPSCI 180.",
+      image: cs180,
       technologies: ["Python", "OpenCV", "Sci-kit Learn", "Scipy", "Numpy"],
-      url: "#",
-      github: "#",
+      url: "https://abao27.github.io",
+      github: "https://github.com/abao27/abao27.github.io",
       featured: true
     },
     {
@@ -40,7 +40,7 @@ const Portfolio = () => {
       image: coindungeon,
       technologies: ["Java", "edu.princeton.cs.algs4"],
       url: "#",
-      github: "#",
+      github: "https://github.com/404",
       featured: false
     },
     {
@@ -60,7 +60,7 @@ const Portfolio = () => {
       image: snake,
       technologies: ["C"],
       url: "#",
-      github: "#",
+      github: "https://github.com/404",
       featured: false
     }
   ];
@@ -75,12 +75,14 @@ const Portfolio = () => {
             <h1 className="text-4xl md:text-5xl font-space font-bold mb-6">
               My Portfolio
             </h1>
-            <p className="text-md text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-md text-muted-foreground mx-auto">
               A collection of projects highlighting my skills in software development,
               artificial intelligence, applied mathematics, and more.
-
-              Note: still updating this page so project links are not live yet
             </p>
+            <p className="text-md text-muted-foreground mx-auto mt-6">
+              <strong>Note:</strong> Some projects may not have a valid Github repository due to school policy (indicated by *).
+            </p>
+
           </div>
 
           {/* Featured Projects */}
@@ -147,10 +149,6 @@ const Portfolio = () => {
             <h2 className="text-2xl font-space font-semibold mb-8 animate-slide-up">
               All Projects
             </h2>
-
-            <p className="text-muted-foreground max-w-2xl mb-6">
-              *Note: some projects may not have a Github repository or demo due to school or club policy.
-            </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project, index) => (
