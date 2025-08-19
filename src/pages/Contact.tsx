@@ -63,12 +63,6 @@ const Contact = () => {
       href: "mailto:alanb@berkeley.edu"
     },
     {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 (858) 733-9696",
-      href: "tel:+18587339696"
-    },
-    {
       icon: Linkedin,
       label: "Linkedin",
       value: "linkedin.com/in/alan-bao/",
