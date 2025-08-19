@@ -193,7 +193,7 @@ const Portfolio = () => {
                       <Button size="sm" variant="modern" className="flex-1" asChild>
                         <a href={project.url} target="_blank" rel="noopener noreferrer">
                           <Eye size={14} />
-                          View
+                          View Demo
                         </a>
                       </Button>
                       <Button size="sm" variant="outline" asChild>
