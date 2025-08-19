@@ -39,17 +39,17 @@ const Portfolio = () => {
       description: "A mini-game with the objective of collecting all coins in a randomly-generated labyrinth.",
       image: coindungeon,
       technologies: ["Java", "edu.princeton.cs.algs4"],
-      url: "#",
+      url: "https://drive.google.com/file/d/196Yo4Zf7PQsvyCxriWHQmki1bw-6Msyg/view",
       github: "https://github.com/404",
       featured: false
     },
     {
       id: 4,
-      title: "Taxtools*",
+      title: "Taxtools",
       description: "A webapp that visualizes tax data and can simulate a user's savings and retirement.",
       image: taxtools,
       technologies: ["Javascript", "Svelte", "Microsoft Excel"],
-      url: "#",
+      url: "https://drive.google.com/file/d/1n3gzhxNjwJoZjwy-zIR00__Ql0tFnSp7/view?usp=sharing",
       github: "https://github.com/Larry-Gan/PCSTaxToolV2",
       featured: false
     },
@@ -59,7 +59,7 @@ const Portfolio = () => {
       description: "The classic snake game that is playable in your terminal, coded in C.",
       image: snake,
       technologies: ["C"],
-      url: "#",
+      url: "https://drive.google.com/file/d/1xV8HLELa6Q7zTB-fQN38jFbR-O54yycO/view?usp=sharing",
       github: "https://github.com/404",
       featured: false
     }
