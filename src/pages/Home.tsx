@@ -46,7 +46,7 @@ const Home = () => {
                   </Link>
                 </Button>
                 
-                <a href="/Resume.docx.pdf" download>
+                <a href="/AlanBao-Resume.docx.pdf" download>
                   <Button variant="glass" size="lg" className="animate-slide-up" style={{animationDelay: '0.2s'}}>
                     <Download size={20} />
                     Download Resume
