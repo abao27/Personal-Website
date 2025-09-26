@@ -90,7 +90,7 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             
-            {/* Contact Form */}
+            {/* Contact */}
             <div className="animate-slide-up">
               <Card className="p-8 shadow-card hover:shadow-elegant transition-smooth">
                 <h2 className="text-2xl font-space font-semibold mb-6">
