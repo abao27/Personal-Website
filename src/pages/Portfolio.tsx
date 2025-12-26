@@ -15,7 +15,7 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Drone System for Humanitarian Missions",
+      title: "Humanitarian Mission Drone System",
       description: "A cooperative two-drone system designed for humanitarian missions such as search-and-rescue and critical payload delivery.",
       image: drones,
       technologies: ["Python", "Javascript", "C++", "ROS2"],
