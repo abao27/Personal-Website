@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Eye, Github } from "lucide-react";
 import { Link } from "react-router-dom";
+import drones from "@/assets/drones.png";
 import ucbassist from "@/assets/UCBAssist.jpeg";
 import coindungeon from "@/assets/coindungeon.png"
 import taxtools from "@/assets/taxtools.png"
@@ -14,6 +15,16 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
+      title: "Drone Cooperative System for Humanitarian Missions",
+      description: "A cooperative two-drone system designed for humanitarian missions such as search-and-rescue and critical payload delivery.",
+      image: drones,
+      technologies: ["Python", "Javascript", "C++", "ROS2"],
+      url: "https://r-agni.github.io/EECSc106aFinal/website/index.html",
+      github: "https://github.com/abao27/EECSc106aFinal1",
+      featured: true
+    },
+    {
+      id: 2,
       title: "UC Berkeley Assist Tool",
       description: "A webapp that helps UC Berkeley students research transferable community college courses.",
       image: ucbassist,
@@ -23,17 +34,17 @@ const Portfolio = () => {
       featured: true
     },
     {
-      id: 2,
+      id: 3,
       title: "Computer Vision Portfolio*",
       description: "Image editing, manipulation and generation derived from computer vision mathematics, courtesy of UC Berkeley COMPSCI 180.",
       image: cs180,
       technologies: ["Python", "OpenCV", "Sci-kit Learn", "Scipy", "Numpy"],
       url: "https://abao27.github.io",
       github: "https://github.com/abao27/abao27.github.io",
-      featured: true
+      featured: false
     },
     {
-      id: 3,
+      id: 4,
       title: "Coin Dungeon*",
       description: "A mini-game with the objective of collecting all coins in a randomly-generated labyrinth.",
       image: coindungeon,
@@ -43,7 +54,7 @@ const Portfolio = () => {
       featured: false
     },
     {
-      id: 4,
+      id: 5,
       title: "Taxtools",
       description: "A webapp that visualizes tax data and can simulate a user's savings and retirement.",
       image: taxtools,
@@ -53,7 +64,7 @@ const Portfolio = () => {
       featured: false
     },
     {
-      id: 5,
+      id: 6,
       title: "Terminal Snake*",
       description: "The classic snake game that is playable in your terminal, coded in C.",
       image: snake,
