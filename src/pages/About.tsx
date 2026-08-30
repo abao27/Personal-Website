@@ -4,8 +4,8 @@ import { GraduationCap, House, Briefcase } from "lucide-react";
 
 const About = () => {
   const summary = [
-    { name: "Prev SWE Intern @ Capital One", icon: Briefcase },
-    { name: "University of California, Berkeley", icon: GraduationCap },
+    { name: "SWE @ Microsoft", icon: Briefcase },
+    { name: "University of California, Berkeley (2022-26)", icon: GraduationCap },
     { name: "San Diego, CA", icon: House }
   ];
 
@@ -67,7 +67,7 @@ const About = () => {
                 
                 <div className="space-y-4 text-foreground/80 leading-relaxed">
                   <p>
-                    Hello! I'm Alan, a senior at UC Berkeley studying EECS and Math. I've lived
+                    Hello! I'm Alan, a current SWE at Microsoft Azure in Redmond and UC Berkeley EECS alumnus. I've lived
                     most of my life in sunny San Diego, but have also lived in other states like
                     Virginia and Tennessee. My MBTI is ENFJ-A.
                   </p>
@@ -75,9 +75,8 @@ const About = () => {
                   <p>
                     My technical interests include software engineering, machine learning, computer
                     vision and cybersecurity. I'm especially passionate about applying computer science
-                    and math to solve complex, real-world problems. Most recently, I interned at Capital
-                    One as a Software Engineer, where I helped design the foundations for a new graph-based
-                    decisioning system for auto loans.
+                    and math to solve complex, real-world problems. Currently, I'm working on a system that redirects
+                    network traffic based on ML algorithms.
                   </p>
                   
                   <p>
@@ -153,6 +152,13 @@ const About = () => {
 
               <div className="space-y-6">
                 {[
+                  {
+                    title: "Software Engineer",
+                    company: "Microsoft",
+                    period: "August 2026 - Present",
+                    description:
+                      "Implementing ML-based networking routing system.",
+                  },
                   {
                     title: "Software Engineer Intern",
                     company: "Capital One",
