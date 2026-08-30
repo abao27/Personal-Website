@@ -71,8 +71,8 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
-      href: "https://maps.app.goo.gl/QSTFSqPBsmB5kLq4A"
+      value: "Seattle, WA",
+      href: "https://maps.app.goo.gl/vA2V2rCaRJkh6T3TA"
     }
   ];
 

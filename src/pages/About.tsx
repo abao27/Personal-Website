@@ -5,7 +5,7 @@ import { GraduationCap, House, Briefcase } from "lucide-react";
 const About = () => {
   const summary = [
     { name: "SWE @ Microsoft", icon: Briefcase },
-    { name: "University of California, Berkeley (2022-26)", icon: GraduationCap },
+    { name: "UC Berkeley (Class of 2026)", icon: GraduationCap },
     { name: "San Diego, CA", icon: House }
   ];
 
